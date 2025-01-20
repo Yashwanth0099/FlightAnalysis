@@ -1,0 +1,104 @@
+#=================== Enabling Passwordless Connection Between EC2 Instances =====================#
+Create SSH-Key for Every Instance
+ssh-keygen -t rsa -N "" -f /home/ubuntu/.ssh/id_rsa
+
+View the Public Key for Every Instance
+cat id_rsa.pub
+
+Edit hosts for Adding IP Addresses and SSH Connection
+sudo vi /etc/hosts
+
+
+#====================== Installing Java 1.8.0_392 =======================#
+Installing Java on Every Instances
+sudo apt-get install openjdk-8-jdk
+
+#======== Setting Up Environment for Project ===============#
+Creating a Bash Profile
+vi .bash_profile
+
+Export Commands for Environment Variables
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export HADOOP_HOME=/home/ubuntu/hadoop-2.6.5
+export PATH=$PATH:$HADOOP_HOME/bin
+export PATH=$PATH:$HADOOP_HOME/sbin
+export HADOOP_MAPRED_HOME=$HADOOP_HOME
+export HADOOP_COMMON_HOME=$HADOOP_HOME
+export HADOOP_HDFS_HOME=$HADOOP_HOME
+export YARN_HOME=$HADOOP_HOME
+
+Use the .bash_profile Created
+source .bash_profile
+
+#=============== Installing Hadoop-2.6.5 in Ubuntu Server ====================#
+Command for Installing Hadoop in Ubuntu Server
+wget http://archive.apache.org/dist/hadoop/common/hadoop-2.6.5/hadoop-2.6.5.tar.gz
+
+Unzip or Open .tar File
+tar -xvzf hadoop-2.6.5.tar.gz
+
+Move to Specific Folder
+cd hadoop-2.6.5/etc/hadoop
+
+Editing some Files inside the Hadoop Folder
+Editing the core-site.xml File:
+vi core-site.xml
+
+Editing the hadoop-site.xml File:
+vi hdfs-site.xml
+
+Editing the mapred-site.xml.template File:
+vi mapred-site.xml.template
+
+Editing yarn-site.xml File:
+vi yarn-site.xml
+
+#============== Once Setup is Complete, Copy Hadoop Folder to all the Other Slaves
+Move the Root Hadoop Directory to slaves from Master
+
+Begin Formatting NameNode:
+move to the hadoop-2.6.5 directory and run the following command:
+bin/hdfs namenode -format (use only once)
+
+Starting HDFS servers (to stop replace start with stop)
+sbin/start-dfs.sh
+For Starting all HDFS Servers at once 
+sbin/start-all.sh
+
+Starting Yarn (to stop replace start with stop)
+sbin/start-yarn.sh
+
+Starting the Job History Server
+sbin/mr-jobhistory-daemon.sh start historyserver
+
+Verify if all Nodes have started or Not: jps
+
+
+#============= Transfer all Project Related Files into the Ubuntu Server =====================#
+Upload the sample input files into the Hadoop Folder
+bin/hdfs dfs -mkdir /input
+bin/hadoop fs -put ~/input.txt /input
+
+
+Compile the Java Files and make a .jar File:
+javac Filename.java -cp $(hadoop classpath)
+
+jar cvf Jarname.jar *.class
+
+Run the program and create the output Folder
+hadoop jar ~/Jarname.jar Filename /input /output
+
+Display the Output File
+hadoop fs -cat /output/part-r-00000
+
+In our case(With our File names) :
+
+javac -classpath $(hadoop classpath) -d . Analysis.java
+
+jar -cvf Analysis.jar analysis/*.class
+
+hdfs dfs -put ./data/03-08/ /input/groupwork/
+
+hadoop jar Analysis.jar analysis.Analysis /path/to/input /path/to/output
+
+

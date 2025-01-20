@@ -1,0 +1,97 @@
+Data from 87-90, No Taxi Or Cancelation Analysis Possible
+The most common reason for flight cancellations:
+	0
+Top 3 airlines with the highest on-schedule probability:
+EA	0.7165439209480622
+AA	0.7070721269070043
+PA (1)	0.7023354547619144
+Top 3 airlines with the lowest on-schedule probability:
+PI	0.5591474920813863
+US	0.6281276913486975
+UA	0.6452050950828004
+Top 3 airports with the longest average taxi time:
+Top 3 airports with the shortest average taxi time:
+
+---------------------------------------------
+
+Data from 90-94, No Taxi Or Cancelation Analysis Possible
+
+The most common reason for flight cancellations:
+	0
+Top 3 airlines with the highest on-schedule probability:
+NW	0.7860991147456895
+PA (1)	0.7857481044361341
+ML (1)	0.754655015263531
+Top 3 airlines with the lowest on-schedule probability:
+DL	0.6319534826781931
+US	0.6871478767374288
+UA	0.6912144321401111
+Top 3 airports with the longest average taxi time:
+Top 3 airports with the shortest average taxi time:
+---------------------------------------------
+
+Data from 95-00, No Cancelation Analysis Possible
+The most common reason for flight cancellations:
+	0
+Top 3 airlines with the highest on-schedule probability:
+AQ	0.8087084599097855
+NW	0.7220353450680267
+CO	0.6949548843939164
+Top 3 airlines with the lowest on-schedule probability:
+AS	0.5974658746473959
+HP	0.617179934339387
+UA	0.6293400715814715
+Top 3 airports with the longest average taxi time:
+JFK	17.556715338232994
+EWR	16.604585794013108
+LGA	14.494293680654298
+Top 3 airports with the shortest average taxi time:
+ABI	0.0
+GUM	3.4066666666666667
+DUT	3.525956738768719
+
+---------------------------------------------
+
+Data from 00-02, No Cancelation Analysis Possible
+The most common reason for flight cancellations:
+	0
+Top 3 airlines with the highest on-schedule probability:
+CO	0.7507397255681009
+AQ	0.7451837077139827
+NW	0.7448430383592469
+Top 3 airlines with the lowest on-schedule probability:
+AS	0.617996822604268
+HP	0.6515266653369576
+UA	0.6595554559898604
+Top 3 airports with the longest average taxi time:
+ACY	169.5
+JFK	17.36390173557289
+EWR	16.70511576899164
+Top 3 airports with the shortest average taxi time:
+DUT	3.2895916334661353
+HRL	3.989844862474706
+WRG	4.1126146788990825
+
+---------------------------------------------
+
+Data from 03-08
+The most common reason for flight cancellations:
+A	289717
+Top 3 airlines with the highest on-schedule probability:
+HA	0.9013566237076408
+AQ	0.8564345227313892
+TZ	0.7416155761697418
+Top 3 airlines with the lowest on-schedule probability:
+EV	0.6313373902859158
+B6	0.6588514131609898
+AS	0.6633244148274735
+Top 3 airports with the longest average taxi time:
+CKB	197.85714285714286
+MKK	45.857638888888886
+MLB	36.87008830022075
+Top 3 airports with the shortest average taxi time:
+LAR	0.0
+LBF	0.0
+RCA	0.0
+
+---------------------------------------------
