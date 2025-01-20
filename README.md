@@ -9,18 +9,18 @@
 - Cleaned and preprocessed data for accuracy.
 - Conducted statistical tests and visualized insights.
 
-2.Algorithms Implemented:
+### Algorithms Implemented:
 - Flight Delay Analysis: Categorized delays to identify punctuality trends.
 - Taxi Time Analysis: Assessed airport ground operation efficiency.
 - Cancellation Reason Analysis: Ranked reasons for flight cancellations.
-3.Workflow:
+### Workflow:
 - Managed Hadoop jobs using Oozie for scalability and efficiency.
 
 ## Key Algorithms
-1.Mapper Phase:
+### Mapper Phase:
 - Extracted fields: departure delay, arrival delay, airline code, etc.
 - Calculated total delays and categorized flights as "on schedule" or "delayed."
-2.Reducer Phase:
+### Reducer Phase:
 - Aggregated data to calculate on-time probabilities for airlines.
 - Identified top and bottom-performing airlines based on punctuality.
 
