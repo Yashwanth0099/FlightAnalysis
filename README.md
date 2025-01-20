@@ -5,7 +5,7 @@
 - Objective: Identify causes of flight delays, predict patterns, and enhance operational efficiency.
 
 ## Data Analysis Approach
-1.Exploratory Data Analysis (EDA):
+### Exploratory Data Analysis (EDA):
 - Cleaned and preprocessed data for accuracy.
 - Conducted statistical tests and visualized insights.
 
